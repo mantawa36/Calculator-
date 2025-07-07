@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calclator| Property Of Someone</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+    body{
+        font-family: cursive;
+    }
+
+    .calculator {
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    #display{
+        width: 100%;
+        height: 40px;
+        font-size: 24px;
+        text-align: right;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: cursive;
+    }
+
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 10px;
+        margin-top: 20px;
+    }
+
+    button{
+        height: 50px;
+        font-size: 18px;
+        border: none;
+        border-radius: 50px;
+        background-color:  ;
+        cursor: pointer;
+        font-family: cursive;
+        }
+
+        button:hover{
+            background-color: #e0e0e0;
+        }
+        footer{
+            background-color: grey;
+            width: 100%;
+            height: 20%;
+            position: absolute;
+            color: whitesmoke;
+            text-align: center;
+            text-decoration: cornsilk;
+
+        }
+</style>
+<body>
+   <div class="calculator">
+    <input type="text" id="display" enabled>
+    <div class="buttons">
+        <button id="clear">C</button>
+        <button id="backspace">>-</button>
+        <button id="divide">/</button>
+        <button id="multiply">&times;</button>
+        <button id="seven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="subtract">-</button>
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="add">+</button>
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="equals">=</button>
+        <button id="zero">0</button>
+        <button id="decimal">.</button>
+    </div>
+</div>
+   </div>
+   <footer>
+    <p>
+        <i>&copy;Calculator Made On 04/05/2025 |Private Property</i>
+    </p>
+   </footer>
+   <script>
+  //Important buttons first
+
+  const display =
+  document.getElementById("display");
+  document.getElementById("clear").onclick
+=()=> display.value ="";
+document.getElementById("backspace").onclick
+=()=> display.value =
+display.value.slice(0,-1);
+
+//Culculation Buttons
+
+document.getElementById("divide").onclick
+=()=>display.value+="/";
+
+document.getElementById("multiply").onclick
+=()=>display.value+="*";
+
+document.getElementById("subtract").onclick
+=()=>display.value+="-";
+
+document.getElementById("add").onclick
+=()=>display.value+="+";
+
+//Numeric Digits Coming Up
+
+document.getElementById("seven").onclick
+=()=>display.value+="7";
+
+document.getElementById("eight").onclick
+=()=>display.value+="8";
+
+document.getElementById("nine").onclick
+=()=>display.value+="9";
+
+document.getElementById("four").onclick
+=()=>display.value+="4";
+
+document.getElementById("five").onclick
+=()=>display.value+="5";
+
+document.getElementById("six").onclick
+=()=>display.value+="6";
+
+document.getElementById("one").onclick
+=()=>display.value+="1";
+
+document.getElementById("two").onclick
+=()=>display.value+="2";
+
+document.getElementById("three").onclick
+=()=>display.value+="3";
+
+document.getElementById("zero").onclick
+=()=>display.value+="0";
+
+document.getElementById("decimal").onclick
+=()=>display.value+=".";
+
+document.getElementById("equals").onclick
+=()=>{
+    try{
+        display.value = eval(display.value);
+    }catch{
+        display.value="Wabhaiza Fut";
+    }
+};
+   </script>
+</body>
+</html>
